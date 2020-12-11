@@ -1,22 +1,12 @@
 var slideCount = 0;
 var slideInterval = 3000;
-var navBtnId = 0;
 var translateWidth = 0;
-var intervals = [];
 
 
 
 $(document).ready(function() {
 
     togl();
-
-   //var obgekt = $(document).find('.viewport');
-   //$(obgekt).each (function(i, elem) {
-   //     setSlideNow (elem, 1);
-   //     intervals.push(setInterval(nextSlide(elem), slideInterval));
-   //     
-   //}
-   //);
 
    var $page = $('html, body');
    $('a[href*="#"]').click(function() {
@@ -28,8 +18,8 @@ $(document).ready(function() {
     return false;
 });
 
-   var switchInterval = setInterval(run, slideInterval);
-    slideCount = $('.slidewrapper').children().length;
+   setInterval(run, slideInterval);
+   // var slideCount = $('.slidewrapper').children().length;
 
    // slideHeight();
     /*
@@ -48,6 +38,13 @@ $(document).ready(function() {
     $(window).resize(function() {
    //     slideHeight();
     });
+
+        $('.menu-burger__header').click(function() {
+            $('.menu-burger__header').toggleClass('open-menu');
+            $('.header__nav').toggleClass('open-menu');
+            $('.fon-blac').toggleClass('open-menu');
+        });
+
 });
 
 function togl () {
@@ -58,16 +55,15 @@ function togl () {
 function run (){
     var obgekt = $(document).find('.viewport');
    $(obgekt).each (function(i, elem) {
-    slideNow = getSlideNow(elem);
-    if (slideNow == undefined || slideNow<1) {
+    var slideNow = getSlideNow(elem);
+    if (slideNow === undefined || slideNow<1) {
         setSlideNow (elem, 1); }
         nextSlide(elem);
    });
 }
 
 function getSlideNow (elem) {
-    var slideNow = $(elem).attr('slideNow');
-    return slideNow;
+    return $(elem).attr('slideNow');
 }
 function setSlideNow (elem, slideNow) {
     if (isNaN(slideNow) || parseInt(slideNow)<1) {
@@ -93,34 +89,13 @@ function textAll () {
     return max;
 }
 
-function slideHeight() {
-    var width = $('.viewport').width();
-    var height = width / 10 * 4;
 
-    if (width<950) {
-        $(".slide_cap").css ( "position", "relative");
-        $(".slide_cap").width("100%");
-        $(".cap-h").css ("padding", "4px 0px 0px 32px");
-        $(".cap_row").css ("padding", "8px 10px 10px 10px");
-        $(".cap_row").css ("text-aling", "justify");
-        $('.viewport').height(height + textAll());
-        $(".slide_cap").height(textAll());
-    } else { 
-        $(".slide_cap").css ( "position", "absolute");
-        $(".cap-h").css ("padding", "20px 12px 9px 16px");
-        $(".cap_row").css ("padding", "5px 16px");
-        $(".cap_row").css ("text-aling", "left");
-        $(".slide_cap").width("29%");
-        $('.viewport').height(height);
-        $(".slide_cap").css("height", "100%");
-    }
-}
 
 function nextSlide(elem) {
     var slideNow = getSlideNow(elem);
     var slidewrapper = $(elem).find('.slidewrapper');
-    slideCount = $(slidewrapper).children().length;
-    if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
+    var slideCount = $(slidewrapper).children().length;
+    if (slideNow === slideCount || slideNow <= 0 || slideNow > slideCount) {
         $(slidewrapper).css('transform', 'translate(0, 0)');
         slideNow = 1;
     } else {
@@ -135,24 +110,4 @@ function nextSlide(elem) {
     }
     setSlideNow(elem, slideNow);
     //setActive();
-}
-
-function prevSlide() {
-    if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
-        translateWidth = -$('.viewport').width() * (slideCount - 1);
-        $('.slidewrapper').css({
-            'transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-        });
-        slideNow = slideCount;
-    } else {
-        translateWidth = -$('.viewport').width() * (slideNow - 2);
-        $('.slidewrapper').css({
-            'transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-        });
-        slideNow--;
-    }
 }
