@@ -86,10 +86,6 @@ li {
     display: none;
 }
 
-@media (max-width: 767px) {
-
-}
-
 .menu-burger__header {
     position: relative;
     width: 40px;
@@ -248,11 +244,10 @@ li {
 .phone, .message {
     display: inline-block;
     position: relative;
-    font-weight: 800;
+    font-weight: 400;
     font-size: 20px;
     line-height: 1;
     letter-spacing: .075em;
-    margin-left: 35px;
     transition: 300ms;
 
 }
@@ -606,7 +601,6 @@ li {
 
     .text-founder {
         width: 85%;
-
         font-size: medium;
     }
 
@@ -922,6 +916,63 @@ h2 + .sub-heading {
     animation-duration: 1s;
 }
 
+@media (max-width: 770px) {
+    #services-extrra .wrapper {
+        padding: 16px 0 6px 0;
+    }
+    #services-extrra .services-top {
+        margin: 0 auto 3.2%;
+        font-size: 14px;
+    }
+    #services-extrra .items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 1.5% 0;
+        justify-content: center;
+    }
+    .extrra-services-block {
+        width: 48%;
+        min-width: 226px;
+        height: 128px;
+        margin: 0 2% 4% 2%;
+        padding: 20px 7px 20px 7px;
+    }
+    .extrra {
+        justify-content:flex-start;
+        width: auto;
+        margin: 0.4% 1.5%;
+    }
+    .extrra-info-icon {
+        width: 27%;
+        min-width: 63px;
+        height: 66px;
+    }
+    .extrra-icon {
+        min-width: 46px;
+        margin: 10px 0 0 0;
+        width: 11%;
+    }
+    #services-extrra .info-title {
+        margin: 9px auto 4px;
+        width: 90%;
+        font-size: 16px;
+        padding-bottom: inherit;
+    }
+    #services-extrra .services-bottom {
+        height: 45px;
+        margin: 0 auto 16px;
+    }
+    #services-extrra .serv-botton {
+        position: inherit;
+        left: auto;
+        display: block;
+        margin: 0 auto;
+        padding: 0.5em 0.4em;
+        width: 191px;
+        text-align: center;
+    }
+}
+
 /* цены */
 #prices {
     background-color: #fff;
@@ -973,6 +1024,67 @@ h2 + .sub-heading {
     color: #000;
 }
 
+@media (max-width: 770px) {
+    #prices .wrapper {
+        padding: 13px 0 5px 0;
+    }
+
+    #prices .items {
+        flex-direction: column;
+    }
+
+    #prices .services-top h2 {
+        margin: -1.5% auto 15px;
+        width: 95%;
+        font-size: 22px;
+    }
+
+    #prices .sub-heading {
+        display: none;
+    }
+
+    .prices-block {
+        width: 88%;
+        margin: 1% auto;
+        padding: 1% 1% 2% 1%;
+        font-size: 16px;
+    }
+    #prices .description {
+        display: block;
+        font-size: 15px;
+        width: 335px;
+        margin: 2% auto;
+        height: auto;
+    }
+    #prices .info-title {
+        width: 70%;
+        margin: 0 auto 10px;
+    }
+    #prices .description h4 {
+        background-color: #ff000000;
+        color: #f10000;
+        margin: 3% 0 1% 0;
+    }
+    #prices .services-bottom {
+        height: 45px;
+        margin: 0 auto 16px;
+    }
+    #prices .serv-botton {
+        position: inherit;
+        left: auto;
+        display: block;
+        margin: 0 auto;
+        padding: 0.5em 0.4em;
+        width: 191px;
+        text-align: center;
+    }
+}
+@media (max-width: 370px) {
+    #prices .description {
+        width: 100%;
+        margin: 2%;
+    }
+}
 /* галерея */
 #foto .wrapper {
     padding: 45px 10px;
@@ -1244,7 +1356,7 @@ footer .message:hover:before {
 }
 
 .contacts-foot {
-    max-width: 200px;
+    max-width: 234px;
     transition: 300ms;
 }
 
