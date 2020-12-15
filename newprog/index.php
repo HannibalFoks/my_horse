@@ -44,11 +44,11 @@
         </div>
         <nav class="header__nav">
             <ul class="menu header__menu">
-                <li><a href="" class="menu__item">О нас</a></li>
-                <li><a href="" class="menu__item">Услуги</a></li>
-                <li><a href="" class="menu__item">Цены</a></li>
-                <li><a href="" class="menu__item">Фото</a></li>
-                <li><a href="" class="menu__item">Контакты</a></li>
+                <li><a href="#we" class="menu__item">О нас</a></li>
+                <li><a href="#services" class="menu__item">Услуги</a></li>
+                <li><a href="#prices" class="menu__item">Цены</a></li>
+                <li><a href="#foto" class="menu__item">Фото</a></li>
+                <li><a href="#contacts" class="menu__item">Контакты</a></li>
             </ul>
         </nav>
     </div>
@@ -377,6 +377,13 @@
                 </div>
                 <div class="items">
                     <div class="foto-block">
+                        <div class="foto-info info-addapt">
+                            <ul>
+                                <li>Услуги берейтора, коновода, подготовка к соревнованиям</li>
+                                <li>Коневозы на 2-4 головы</li>
+                                <li>Ковка и расчистка</li>
+                            </ul>
+                        </div>
                         <div class="foto-slaider">
                             <div class="viewport">
                                 <ul class="slidewrapper">
@@ -387,7 +394,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="foto-info">
+                        <div class="foto-info info-no-addapt">
                             <ul>
                                 <li>Услуги берейтора, коновода, подготовка к соревнованиям</li>
                                 <li>Коневозы на 2-4 головы</li>

@@ -84,6 +84,8 @@ li {
     background-color: black;
     z-index: 200;
     display: none;
+    position: fixed;
+    width: 100%;
 }
 
 .menu-burger__header {
@@ -472,6 +474,11 @@ li {
     padding: 1%;
     text-shadow: 4px 1px 22px black;
 }
+@media (max-width: 975px) {
+    .title h1 {
+        font-size: 1.3em;
+    }
+}
 
 @media (max-width: 770px) {
     #navigaror {
@@ -571,6 +578,7 @@ li {
     flex: 0 0 auto;
     width: 56%;
     margin-right: 3%;
+    padding-right: 14px;
     font-weight: 300;
     font-size: large;
     line-height: 1.6;
@@ -584,7 +592,19 @@ li {
     max-width: 350px;
     transition: 300ms linear;
 }
-
+@media (max-width: 1200px) {
+    #we .wrapper {
+        padding: 0;
+        margin: 0;
+    }
+    .content-container {
+        margin: 3%;
+    }
+    .text-founder {
+        width: 48%;
+        font-size: medium;
+    }
+}
 @media (max-width: 770px) {
     .founder {
         display: none;
@@ -711,9 +731,29 @@ h2 + .sub-heading {
 
 .description {
     width: 95%;
-    height: 260px;
+    height: auto;
     margin: 27px auto 20px;
     text-align: left;
+}
+@media (max-width: 1200px) {
+    #services .wrapper {
+        padding: 0;
+    }
+    #services .services-top {
+        margin: 1% 2%;
+        width: 97%;
+    }
+    #services .items {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .services-block {
+        width: 37%;
+        min-width: 320px;
+    }
+    #services .description {
+        min-width: 320px;
+    }
 }
 
 @media (max-width: 770px) {
@@ -916,6 +956,39 @@ h2 + .sub-heading {
     animation-duration: 1s;
 }
 
+@media (max-width: 1200px) {
+    #services-extrra .wrapper {
+        padding: 0;
+    }
+    #services-extrra .items {
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+    .extrra {
+        max-width: 285px;
+    }
+    .extrra-services-block {
+        margin: 0 0 4% 1.3%;
+        padding: 19px 20px;
+    }
+    #services-extrra .info-title {
+        font-size: 0.99em;
+    }
+    #services-extrra .services-bottom {
+        height: 45px;
+        margin: 0 auto 16px;
+    }
+    #services-extrra .serv-botton {
+        position: inherit;
+        left: auto;
+        display: block;
+        margin: 0 auto;
+        padding: 0.5em 0.4em;
+        width: 191px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 770px) {
     #services-extrra .wrapper {
         padding: 16px 0 6px 0;
@@ -957,19 +1030,6 @@ h2 + .sub-heading {
         width: 90%;
         font-size: 16px;
         padding-bottom: inherit;
-    }
-    #services-extrra .services-bottom {
-        height: 45px;
-        margin: 0 auto 16px;
-    }
-    #services-extrra .serv-botton {
-        position: inherit;
-        left: auto;
-        display: block;
-        margin: 0 auto;
-        padding: 0.5em 0.4em;
-        width: 191px;
-        text-align: center;
     }
 }
 
@@ -1024,9 +1084,46 @@ h2 + .sub-heading {
     color: #000;
 }
 
+@media (max-width: 1300px) {
+    #prices .wrapper  {
+        padding: 30px 0;
+    }
+    #prices .items {
+        flex-wrap: wrap;
+    }
+    #prices .prices-block {
+        width: 42%;
+        padding: 0.8%;
+    }
+    #prices .description {
+        height: auto;
+    }
+
+    #prices .services-top {
+        margin: 0 auto 15px;
+        width: 95%;
+        font-size: 16px;
+    }
+    #prices .services-bottom {
+        height: 45px;
+        margin: 0 auto 16px;
+    }
+    #prices .serv-botton {
+        position: inherit;
+        left: auto;
+        display: block;
+        margin: 0 auto;
+        padding: 0.5em 0.4em;
+        width: 191px;
+        text-align: center;
+    }
+}
+
+
 @media (max-width: 770px) {
     #prices .wrapper {
-        padding: 13px 0 5px 0;
+        padding: 13px 0 15px 0;
+        margin-bottom: 4%;
     }
 
     #prices .items {
@@ -1043,7 +1140,7 @@ h2 + .sub-heading {
         display: none;
     }
 
-    .prices-block {
+     #prices .prices-block {
         width: 88%;
         margin: 1% auto;
         padding: 1% 1% 2% 1%;
@@ -1079,7 +1176,13 @@ h2 + .sub-heading {
         text-align: center;
     }
 }
-@media (max-width: 370px) {
+@media (max-width: 440px) {
+    #prices .wrapper {
+        margin-bottom: 6%;
+    }
+    #prices .info-box {
+        padding: 3px 7px;
+    }
     #prices .description {
         width: 100%;
         margin: 2%;
@@ -1100,7 +1203,9 @@ h2 + .sub-heading {
     align-items: center;
     margin: 30px auto 50px;
 }
-
+.info-addapt {
+    display: none;
+}
 .foto-info {
     flex: 0 0 auto;
     width: 25%;
@@ -1150,6 +1255,38 @@ h2 + .sub-heading {
 .slide-img {
     width: 100%;
     display: block;
+}
+@media (max-width: 1390px) {
+    #foto .wrapper {
+        width: 90%;
+    }
+}
+@media (max-width: 1200px) {
+    #foto .wrapper {
+        padding: 16px 0;
+    }
+    #foto .foto-block {
+        flex-direction: column;
+        margin: 25px auto 20px;
+    }
+    .info-no-addapt {
+        display: none;
+    }
+    .info-addapt {
+        display: block;
+    }
+    #foto h2 {
+        margin: 0 14px -7px 14px;
+        padding: 0 4px 0 4px;
+    }
+    .foto-info {
+        width: 90%;
+        margin: 2% 0;
+        font-size: medium;
+    }
+    .foto-slaider {
+        width: 90%;
+    }
 }
 
 /* контакты */
@@ -1220,6 +1357,16 @@ h2 + .sub-heading {
 #contacts .phone:hover, #contacts .message:hover {
     transform: scale(1.05);
 }
+
+@media (max-width: 1015px) {
+    #contacts .wrapper {
+        padding: 16px 0;
+    }
+    .contacts-item .items {
+        flex: auto;
+    }
+}
+
 
 /* дребезжание иконок */
 .fa-vk:hover, .fa-instagram:hover, .call:hover .fa-phone-square, .phone:hover .fa-phone-square,
@@ -1367,3 +1514,34 @@ footer .message:hover:before {
 .fa-vk, .fa-instagram {
     letter-spacing: .325em;
 }
+
+@media (max-width: 1350px) {
+    footer .wrapper {
+        width: 95%;
+    }
+}
+@media (max-width: 790px) {
+    footer .wrapper {
+        padding: 4px;
+        flex-wrap: wrap;
+    }
+    footer .logotype {
+        display: none;
+    }
+    footer .contacts-foot {
+        padding: 0.4% 2%;
+        font-size: 16px;
+        margin: 0.2% 2%;
+    }
+    footer .call {
+        flex: 1 1 auto;
+        max-width: 197px;
+        padding: 2%;
+        font-size: 12px;
+        margin: 0.2% 2%;
+    }
+    footer .phone {
+        font-size: 16px;
+    }
+}
+
